@@ -1,0 +1,23 @@
+@import "./styles/variables.module.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito' sans-serif;
+}
+
+.error {
+  text-align: center !important;
+  color: red !important;
+  font-size: 1.2rem !important;
+}
+
+a {
+  text-decoration: none;
+  color: $blue;
+  font-weight: 700;
+}
+a:hover {
+  color: $pinkred;
+}
