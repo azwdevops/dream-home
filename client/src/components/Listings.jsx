@@ -42,7 +42,9 @@ const Listings = () => {
       <div className="category-list">
         {categories?.map((category, index) => (
           <div
-            className={`category`}
+            className={`category ${
+              category.label === selectedCategory && "selected"
+            }`}
             key={index}
             onClick={() => setSelectedCategory(category.label)}
           >
@@ -58,14 +60,16 @@ const Listings = () => {
           {listings.map((listing) => (
             <ListingCard
               key={listing?._id}
-              id={listing._id}
+              listingId={listing._id}
               creator={listing.creator}
+              category={listing.category}
               listingPhotoPaths={listing.listingPhotoPaths}
               city={listing.city}
               province={listing.province}
               country={listing.country}
               price={listing.price}
               type={listing.type}
+              isBooking={false}
             />
           ))}
         </div>

@@ -5,6 +5,8 @@ const multer = require("multer");
 const {
   createListing,
   getListings,
+  getSingleListing,
+  searchListing,
 } = require("../controllers/listingController");
 
 // configuration multer for file upload
@@ -24,5 +26,7 @@ const upload = multer({ storage });
 router.post("/create", upload.array("listingPhotos"), createListing);
 
 router.get("/", getListings);
+router.get("/search/:searchTerm", searchListing);
+router.get("/:listingId", getSingleListing);
 
 module.exports = router;

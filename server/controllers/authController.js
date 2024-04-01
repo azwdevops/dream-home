@@ -65,7 +65,9 @@ module.exports.login = async (req, res) => {
     const token = jwt.sign({ id: existingUser._id }, process.env.JWT_SECRET);
 
     // since we want to choose the fields we want to exclude, we make another call to get user so that we can select the fields
-    const user = await User.findById(existingUser._id).select("-password");
+    const user = await User.findById(existingUser._id).select(
+      "-password -tripList -wishList -propertyList -reservationList"
+    );
     console.log(user);
 
     return res.status(200).json({ token, user });

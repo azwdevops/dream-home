@@ -12,6 +12,7 @@ import {
 
 import authReducer from "../features/authSlice";
 import listingReducer from "../features/listingSlice";
+import bookingReducer from "../features/bookingSlice";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 
 const persistConfig = {
@@ -23,6 +24,7 @@ const persistConfig = {
 const rootReducer = combineReducers({
   auth: authReducer,
   listings: listingReducer,
+  bookings: bookingReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

@@ -12,7 +12,7 @@
     padding: 10px 30px;
   }
 
-  &_left {
+  &-left {
     max-width: 400px;
 
     img {
@@ -20,12 +20,12 @@
       margin-bottom: 20px;
     }
 
-    &_socials {
+    &-socials {
       display: flex;
       gap: 25px;
       margin-top: 20px;
 
-      &_icon {
+      &-icon {
         width: 40px;
         height: 40px;
         border-radius: 50%;
@@ -43,7 +43,7 @@
     }
   }
 
-  &_center {
+  &-center {
     text-decoration: none;
 
     ul {
@@ -70,14 +70,14 @@
     }
   }
 
-  &_right {
+  &-right {
     max-width: 350px;
 
     h3 {
       margin-bottom: 20px;
     }
 
-    &_info {
+    &-info {
       display: flex;
 
       p {

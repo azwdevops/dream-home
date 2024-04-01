@@ -51,10 +51,10 @@ import {
 import { AiFillCar } from "react-icons/ai";
 
 export const categories = [
-  // {
-  //   label: "All",
-  //   icon: <BiWorld />,
-  // },
+  {
+    label: "All",
+    icon: <BiWorld />,
+  },
   {
     img: "assets/beach_cat.jpg",
     label: "Beachfront",

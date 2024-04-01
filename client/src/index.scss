@@ -16,8 +16,16 @@
 a {
   text-decoration: none;
   color: $blue;
-  font-weight: 700;
+  font-weight: 400;
 }
 a:hover {
   color: $pinkred;
+}
+
+.logo {
+  font-size: 1.7rem;
+  font-weight: 700;
+  span {
+    color: red;
+  }
 }
